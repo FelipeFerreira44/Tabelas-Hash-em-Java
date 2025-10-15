@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-"""
-Gerador de Gráficos HTML - Não requer instalação de bibliotecas
-"""
+
 
 def gerar_graficos_html():
     print("Gerando gráficos em HTML...")
