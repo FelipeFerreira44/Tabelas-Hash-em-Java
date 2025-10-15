@@ -1,0 +1,54 @@
+RELATÓRIO COMPLETO - ANÁLISE DE TABELAS HASH
+============================================
+
+RESUMO 
+----------------
+Total de testes executados: 48
+
+• Encadeamentos: 21 testes
+• Rehashings: 27 testes
+
+ESTATÍSTICAS 
+-------------------
+Tempo médio de inserção: 0,07 ms
+Colisões médias: 1953,4
+
+MELHORES 
+---------------------
+Mais Rápidas :
+1. Encadeamento + multiplicacao: 0,00 ms (1000 colisões)
+2. Rehashing-duplo + multiplicacao: 0,00 ms (1000 colisões)
+3. Rehashing-linear + multiplicacao: 0,00 ms (1000 colisões)
+4. Rehashing-quadratico + multiplicacao: 0,00 ms (1000 colisões)
+5. Encadeamento + xorshift: 0,00 ms (1000 colisões)
+
+Menos Colisões :
+1. Encadeamento + dobramento: 0000 colisões (0,00 ms)
+2. Encadeamento + multiplicacao: 0000 colisões (0,00 ms)
+3. Encadeamento + xorshift: 0000 colisões (0,00 ms)
+4. Encadeamento + xorshift: 0000 colisões (0,00 ms)
+5. Encadeamento + multiplicacao: 0000 colisões (0,00 ms)
+
+PIORES CASOS :
+1. Encadeamento + multiplicacao: 5000 colisões (0,00 ms)
+2. Encadeamento + xorshift: 5000 colisões (0,00 ms)
+3. Rehashing-duplo + multiplicacao: 5000 colisões (0,00 ms)
+
+CONCLUSÕES 
+--------------------------
+ RECOMENDADO:
+   • Encadeamento com XOR Shift
+   • Encadeamento com Multiplicação
+   • Rehashing Quadrático com XOR Shift (apenas carga <= 50%)
+
+ EVITAR:
+   • Dobramento (muito lento)
+   • Rehashing Linear com Dobramento
+   • Rehashing com carga > 50%
+
+  VENCEDORA:
+   ENCADEAMENTO + XOR SHIFT
+   - Mais rápida
+   - Colisões moderadas
+   - Suporta qualquer carga
+   - Performance consistente
