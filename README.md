@@ -63,7 +63,7 @@ java -cp bin ExecutorTestes
 java -cp bin AnalisadorResultados
 
 # 4. Gerar gráficos (opcional)
-python3 gerar_graficos_reais.py
+python3 gerar_graficos_simples.py
 
 # 5. Ver gráficos
-open resultados/grafico_tempo.png
+open resultados/graficos.html
