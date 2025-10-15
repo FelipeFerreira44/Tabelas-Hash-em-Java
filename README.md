@@ -48,4 +48,22 @@ O trabalho segue integralmente os requisitos do **RA3**, conforme enunciado ofic
 
 
 
+---
 
+## Como executar
+(execute nesta ordem):
+
+# 1. Compilar
+javac -d bin src/*.java
+
+# 2. Executar testes (ISSO É O PRINCIPAL)
+java -cp bin ExecutorTestes
+
+# 3. Analisar resultados
+java -cp bin AnalisadorResultados
+
+# 4. Gerar gráficos (opcional)
+python3 gerar_graficos_reais.py
+
+# 5. Ver gráficos
+open resultados/grafico_tempo.png
